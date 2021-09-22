@@ -35,6 +35,10 @@
             margin:0;
         }
 
+        a{
+            transition: all 200ms ease-in-out;
+        }
+
         a:hover svg path{
             fill: $brightcyan;
         }
@@ -55,6 +59,8 @@
         }
 
         a {
+            transition: color 200ms ease-in-out;
+
             &:hover {
                 color: $brightcyan;
             }
