@@ -226,15 +226,36 @@ button:hover {
 }
 
 .header .overlay {
-  visibility: hidden;
-  opacity: 0;
   position: fixed;
   top: 4.6875rem;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1;
+}
+
+.header .overlay.fade-in {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(transparent));
   background-image: linear-gradient(#2d314d, transparent);
+}
+
+.header__menu {
+  background: white;
+  padding: 1.625rem;
+  border-radius: 5px;
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  top: 6.1875rem;
+  opacity: 0;
+  z-index: 2;
+}
+
+.header__menu a {
+  color: #2d314d;
+  padding: 0.625rem;
+  display: block;
+  text-align: center;
 }
 
 .header.open .header__hbg :first-child {
@@ -315,24 +336,6 @@ button:hover {
 
 .header__links a:hover::before {
   opacity: 1;
-}
-
-.header__menu {
-  background: white;
-  padding: 1.625rem;
-  border-radius: 5px;
-  position: absolute;
-  left: 1.5rem;
-  right: 1.5rem;
-  top: 6.1875rem;
-  opacity: 0;
-}
-
-.header__menu a {
-  color: #2d314d;
-  padding: 0.625rem;
-  display: block;
-  text-align: center;
 }
 
 .hero {

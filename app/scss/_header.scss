@@ -4,16 +4,38 @@
     //Hamburger Open Styles
 
     .overlay {
-        visibility: hidden;
-        opacity: 0;
         position: fixed;
         top: 4.6875rem;
         bottom: 0;
         left: 0;
         right: 0;    
-        background-image: linear-gradient($darkblue, transparent);
-   
+        z-index:1;
         
+        &.fade-in{
+            background-image: linear-gradient($darkblue, transparent);
+        }
+        
+    
+    }
+
+    &__menu {
+        background: white;
+        padding: 1.625rem;
+        border-radius: 5px;
+        position: absolute;
+        left: 1.5rem;
+        right: 1.5rem;
+        top: 6.1875rem;
+        opacity: 0;
+        z-index: 2;
+        
+        a {
+            color: $darkblue;
+            padding: 0.625rem;
+            display: block;
+            text-align: center;
+        }
+
     }
 
     &.open {
@@ -103,23 +125,6 @@
         }
     }
 
-    &__menu {
-        background: white;
-        padding: 1.625rem;
-        border-radius: 5px;
-        position: absolute;
-        left: 1.5rem;
-        right: 1.5rem;
-        top: 6.1875rem;
-        opacity: 0;
-        
-        a {
-            color: $darkblue;
-            padding: 0.625rem;
-            display: block;
-            text-align: center;
-        }
-
-    }
+   
 }
 
