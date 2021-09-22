@@ -1,0 +1,93 @@
+.footer{
+    background-color: $darkblue;
+    color: $white;
+    text-align: center;
+
+    @include breakpoint-up(medium){
+        text-align: left;
+    }
+
+    &__grid {
+        @include breakpoint-up(medium) {
+            display: grid;
+            grid-template-columns: 25% 20% 20% 35%;
+        }
+    }
+
+    &__imagelink {
+
+    }
+
+    &__logo {
+        img{
+            padding-bottom: 2rem;
+            padding-top: 1rem;
+        }
+        
+    }
+
+    &__icons {
+        max-width: 11rem;
+        margin: auto;
+        margin-bottom: 2rem;
+        
+        @include breakpoint-up(medium){
+            margin:0;
+        }
+
+        a:hover svg path{
+            fill: $brightcyan;
+        }
+    }
+
+    &__textlink {
+        font-size: $font-small;
+
+        &.col1 {
+            @include breakpoint-up(medium) {
+                margin-left: 1rem;
+            }
+
+        }
+
+        &.col2 {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            &:hover {
+                color: $brightcyan;
+            }
+        }        
+
+    }
+
+    &__last {
+        @include breakpoint-up(medium){
+            text-align: right;
+        }
+
+        button {
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__copyright {
+        font-size: $font-small;
+        color: $grayishblue;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    font-weight: 300; 
+    text-align: center; 
+    background-color: $darkblue; 
+    color: $grayishblue;
+
+    a { 
+        color: white; 
+        font-weight: 300;}
+
+}

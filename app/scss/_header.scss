@@ -1,0 +1,125 @@
+.header {
+    background: white;
+
+    //Hamburger Open Styles
+
+    .overlay {
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 4.6875rem;
+        bottom: 0;
+        left: 0;
+        right: 0;    
+        background-image: linear-gradient($darkblue, transparent);
+   
+        
+    }
+
+    &.open {
+
+        .header__hbg { //mobile menu button
+            :first-child {
+                transform: rotate(45deg);
+            }
+    
+            :nth-child(2) {
+                opacity: 0;
+            }
+    
+            :last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+
+    nav {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        position: relative;
+    }
+
+    &__logo {
+        
+
+        img {
+            width:8.8125rem;
+            height:1.375rem;
+        }
+    }
+
+    &__hbg {
+        position: absolute;
+        
+        right: 1.5rem;
+        //Mobile Menu button
+        > span {
+            display:block;
+            width: 26px;
+            height: 2px;
+            background-color: $darkblue;
+            transition: all 300ms ease-in-out;
+            transform-origin: 5.5px;
+
+            &:not(:last-child) {
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    &__links {
+    
+
+        a{
+            position:relative;
+            font-size: $font-small;
+            color: $grayishblue;
+            transition: color 200ms ease-in-out;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding-top: 1.5rem;
+            padding-bottom: 2.25rem;
+            
+            &::before{
+                content:"";
+                display:block;
+                transition: opacity 200ms ease-in-out;
+                background: linear-gradient(to right, $limegreen, $brightcyan);
+                opacity: 0;
+                position: absolute;   
+                height: 0.25rem;
+                left:0;
+                right:0;
+                bottom:0;
+            }
+
+            &:hover{
+                color: $darkblue;
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__menu {
+        background: white;
+        padding: 1.625rem;
+        border-radius: 5px;
+        position: absolute;
+        left: 1.5rem;
+        right: 1.5rem;
+        top: 6.1875rem;
+        opacity: 0;
+        
+        a {
+            color: $darkblue;
+            padding: 0.625rem;
+            display: block;
+            text-align: center;
+        }
+
+    }
+}
+

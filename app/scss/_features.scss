@@ -1,0 +1,83 @@
+.features {
+    background-color: $lightgrayishblue;
+    text-align: center;
+
+    @include breakpoint-up(large){
+        text-align: left;
+    }
+
+    p {
+        font-size: $font-small;
+        color: $grayishblue;
+        line-height: 1.7;
+
+        @include breakpoint-up(large){
+            font-size: $font-med;
+        }
+    }
+
+    
+    &__headline>p{
+
+        @include breakpoint-up(medium){
+            width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include breakpoint-up(large){
+            width: 650px;
+            margin-left: 0;
+        }
+    }
+
+    &__headline>h2{
+        
+    }
+    
+
+    &__grid{
+
+        @include breakpoint-up(medium) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        @include breakpoint-up(large) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+    }
+
+    &__item {
+        margin-top: 2.25rem;
+        margin-bottom: 2.25rem;
+
+        @include breakpoint-up(medium) {
+            flex: 45%;
+            margin-top: 0rem;
+            margin-bottom: 0rem;
+            
+        }
+
+        @include breakpoint-up(large) {
+            flex: 1;
+
+        }
+    }
+
+    &__icon {
+        margin-bottom: 1rem;
+    }
+
+    &__title{
+
+    }
+
+    &__description{
+        
+        
+    }
+}
